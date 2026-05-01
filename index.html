@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Yam</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <nav class="navbar">
+            <a href="#intro">Intro</a>
+            <a href="#about">About Me</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+
+            <button id="theme-toggle" class="theme-btn" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+        </nav>
+
+        <div id="intro" class="text-center">
+            <h1>INTRODUCTION</h1>
+
+            <p>
+                <img src="william.png" alt="Profile Icon" width="250" class="profile-img">
+            </p>
+
+            <h1>GERON, RONALD WILLIAM D.</h1>
+            <h3>STUDENT - CPE3B</h3>
+        </div>
+
+        <hr> 
+        
+        <h2 id="about">About Me</h2>
+        
+        <p class="justify-text">
+            Hellooo!! I'm <b>Ronald William D. Geron</b> and you can call me <b>"yam"</b> for short, a dedicated student at the University of Batangas Lipa Campus. 
+            As a student, I enjoy learning new things, exploring new hobbies, and making myself ready for the real world. 
+        </p>   
+        <p class="justify-text">
+            I'm excited to show off my other skills or talents and share a little about myself!!
+        </p>
+        
+        <ol>
+            <li><a href="hobbies.html">Personal Interests</a></li>
+            <li><a href="skills.html">Core Competencies</a></li>
+            <li><a href="tools_and_technology_stack.html">Tools and Technology Stack</a></li>
+        </ol>
+
+        <hr>
+
+        <h2 id="education">Educational Background</h2>
+        
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Institution</th>
+                    <th>Year / Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>College</b><br><i>BS Computer Engineering</i></td>
+                    <td>University of Batangas - Lipa Campus</td>
+                    <td>Current (3rd Year)<br><i>S.Y. 2023 - Present</i></td>
+                </tr>
+                <tr>
+                    <td><b>Senior High School</b><br><i>STEM Strand</i></td>
+                    <td>LCC Silvercrest Senior High School</td>
+                    <td>S.Y. 2021 - 2023</td>
+                </tr>
+                <tr>
+                    <td><b>Junior High School</b></td>
+                    <td>Pinagkawitan Integrated National High School</td>
+                    <td>S.Y. 2017 - 2021</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2 id="gallery">My Projects</h2>
+        <p class="justify-text">Here is a collection of some of my favorite technical builds and projects.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="24sshotclock.jpg" alt="Project 1">
+            </div>
+            <div class="gallery-item">
+                <img src="NYC Collision 2024.png" alt="Project 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="Project 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" alt="Project 4">
+            </div>
+        </div>
+        
+        <hr> 
+
+
+        <h2 id="contact">Get in Touch</h2>
+        <form>
+            <label for="username">Name</label>
+            <input type="text" id="username" placeholder="Enter your name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="youremail@example.com" />
+
+            <label for="message">Your message</label>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+
+            <label>I am a:</label>
+            <div class="radio-group">
+                <input type="radio" name="user_role" id="student" value="student" checked>
+                <label for="student">Student</label>
+
+                <input type="radio" name="user_role" id="professor" value="professor">
+                <label for="professor">Professor</label>
+
+                <input type="radio" name="user_role" id="employer" value="employer">
+                <label for="employer">Employer / Recruiter</label>
+                
+                <input type="radio" name="user_role" id="other" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <input type="submit" value="Submit Information"/>
+        </form>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="mailto:ronaldwilliam.geron@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/ronaldwilliam.d.geron" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ronaldwilliamd.geron" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/ronaldwilliamgeron" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2026 Ronald William D. Geron. All rights reserved.</p>
+        </footer>
+
+    </div>
+    <script>
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = themeToggleBtn.querySelector('i');
+            
+            themeToggleBtn.addEventListener('click', () => {
+                // Toggles the dark mode class on the whole body
+                document.body.classList.toggle('dark-mode');
+                
+                // Switches the icon between a moon and a sun
+                if (document.body.classList.contains('dark-mode')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            });
+    </script>
+</body>
+</html>
