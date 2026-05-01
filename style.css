@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 850px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 40px;
     background-color: #ffffff;
@@ -330,18 +330,57 @@ body.dark-mode .social-icons a {
 
 /* --- Fine-Tuning Dark Mode Readability --- */
 body.dark-mode .styled-table td i {
-    color: #cbd5e0; /* Makes "S.Y. 2023 - Present" slightly brighter */
+    color: #cbd5e0;
+    /* Makes "S.Y. 2023 - Present" slightly brighter */
 }
 
 body.dark-mode .contact-form label {
-    color: #edf2f7; /* Ensures labels like "Name" and "I am a:" are bright */
+    color: #edf2f7;
+    /* Ensures labels like "Name" and "I am a:" are bright */
 }
 
 body.dark-mode .skills-list-box a {
-    color: #63b3ed; /* Makes links in the blue box stand out more */
+    color: #63b3ed;
+    /* Makes links in the blue box stand out more */
 }
 
 body.dark-mode .skills-list-box {
-    background-color: #1e3a8a; /* Darker blue background for better contrast with light text */
+    background-color: #1e3a8a;
+    /* Darker blue background for better contrast with light text */
     color: #ffffff;
 }
+
+/* Styling para sa label sa taas ng 1,2,3 */
+.toc-label {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a5568;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* Siguraduhin na ang box ay laging kita */
+.skills-list-box {
+    background-color: #f0f7ff;
+    /* Light blue box */
+    padding: 20px 30px;
+    border-radius: 12px;
+    border-left: 6px solid #3182ce;
+    /* Blue vertical line */
+    margin-bottom: 30px;
+}
+
+/* Dark Mode Support para hindi maging transparent */
+body.dark-mode .skills-list-box {
+    background-color: #2c5282;
+    /* Solid dark blue para sa dark mode */
+    border-color: #63b3ed;
+}
+
+body.dark-mode .toc-label,
+body.dark-mode .skills-list-box li a {
+    color: #ffffff;
+    /* Puti para malinaw basahin */
+}
+

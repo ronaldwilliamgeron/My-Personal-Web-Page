@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Ronald William</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --container-bg: #ffffff;
+            --text-main: #1a202c;
+            --text-sub: #4a5568;
+            --nav-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --primary-blue: #3182ce;
+            --shadow: rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a202c;
+            --container-bg: #2d3748;
+            --text-main: #f7fafc;
+            --text-sub: #cbd5e0;
+            --nav-bg: #1a202c;
+            --card-border: #4a5568;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            padding: 30px 0;
+            text-align: center;
+            background: var(--nav-bg);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #718096;
+            margin: 0 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* BOLD AND UNDERLINED ACTIVE LINK */
+        nav a.active {
+            color: var(--primary-blue);
+            font-weight: 900;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 5px;
+        }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            margin-left: 15px;
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        /* MAIN WHITE CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 60px 40px;
+            background-color: var(--container-bg);
+            box-shadow: 0 4px 15px var(--shadow);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .header-section {
+            margin-bottom: 50px;
+        }
+
+        .header-section h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background: var(--primary-blue);
+            margin: 20px auto;
+        }
+
+        .sub-header {
+            color: var(--text-sub);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* SKILLS GRID LAYOUT */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: var(--container-bg);
+            padding: 40px 25px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            border-top: 4px solid var(--primary-blue);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .skill-card i {
+            font-size: 3.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+            text-transform: capitalize;
+        }
+
+        .skill-card p {
+            color: var(--text-sub);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: #0000ff;
+            /* Royal Blue */
+            font-size: 1.4em;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="tools_and_technology_stack.html">Tools</a>
+        <i class="fas fa-moon dark-mode-toggle" id="darkModeBtn"></i>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Core Competencies</h1>
+            <div class="divider"></div>
+            <p class="sub-header">Applying my academic foundation and technical skills to real-world engineering
+                challenges.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>Analytical Thinking</h3>
+                <p>
+                    I approach challenges with a strategic mindset. By analyzing complex patterns—much like in a game of
+                    chess—I develop logical solutions to technical engineering problems.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Hardware Logic</h3>
+                <p>
+                    I have a strong grasp of digital logic systems. I enjoy translating theoretical concepts into
+                    physical builds, such as applying Karnaugh Maps to my digital circuit projects.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-users-gear"></i>
+                <h3>Collaboration</h3>
+                <p>
+                    I thrive in team settings. My experience in high-pressure environments has taught me the importance
+                    of clear communication and coordination to achieve a shared goal.
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h2>Contact Me:</h2>
+            <div class="social-icons">
+                <a href="mailto:ronaldwilliam.geron@gmail.com" title="Email Me">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.facebook.com/ronaldwilliam.d.geron" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/ronaldwilliamd.geron" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/ronaldwilliamgeron" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Ronald William D. Geron. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const btn = document.getElementById('darkModeBtn');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') btn.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        btn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                btn.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                btn.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+    </script>
+</body>
+
+</html>

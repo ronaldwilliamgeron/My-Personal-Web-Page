@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Ronald William D. Geron</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* --- NAVBAR FIXED SPACING & ALIGNMENT --- */
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #a0aec0;
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-active {
+            color: #3182ce !important;
+            position: relative;
+        }
+
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -26px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #3182ce;
+        }
+
+        /* Theme Toggle Button Style */
+        .theme-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #a0aec0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        /* --- TABLE OF CONTENTS --- */
+        .toc-box {
+            background-color: #f0f7ff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 6px solid #3182ce;
+        }
+
+        .toc-box ol {
+            margin-left: 20px;
+        }
+
+        .toc-box li a {
+            color: #2c5282;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        /* --- HOBBIES GRID --- */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .hobby-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .hobby-info {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        /* --- VIDEO & FOOTER FIXES --- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: #0000ff;
+            /* Royal Blue */
+            font-size: 1.4em;
+            text-decoration: none;
+        }
+
+        /* --- DARK MODE FIXES --- */
+        body.dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .container {
+            background-color: #2d3748;
+        }
+
+        body.dark-mode .toc-box {
+            background-color: #2c5282;
+            border-color: #63b3ed;
+        }
+
+        body.dark-mode .toc-box li a {
+            color: #ffffff;
+        }
+
+        body.dark-mode .hobby-card {
+            background-color: #1a202c;
+            border-color: #4a5568;
+        }
+
+        body.dark-mode .hobby-info h3 {
+            color: #fff;
+        }
+
+        body.dark-mode .social-icons a {
+            color: #63b3ed;
+        }
+
+        /* Styling para sa label sa taas ng 1,2,3 */
+        .toc-label {
+            font-size: 0.8em;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a5568;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Siguraduhin na ang box ay laging kita */
+        .skills-list-box {
+            background-color: #f0f7ff;
+            /* Light blue box */
+            padding: 20px 30px;
+            border-radius: 12px;
+            border-left: 6px solid #3182ce;
+            /* Blue vertical line */
+            margin-bottom: 30px;
+        }
+
+        /* Dark Mode Support para hindi maging transparent */
+        body.dark-mode .skills-list-box {
+            background-color: #2c5282;
+            /* Solid dark blue para sa dark mode */
+            border-color: #63b3ed;
+        }
+
+        body.dark-mode .toc-label,
+        body.dark-mode .skills-list-box li a {
+            color: #ffffff;
+            /* Puti para malinaw basahin */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="hobbies.html" style="color: #3182ce;">Hobbies</a>
+            <a href="skills.html">Skills</a>
+            <a href="tools_and_technology_stack.html">Tools</a>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+
+        <header style="text-align: center;" id="personal-interests">
+            <h1 style="font-size: 2.5em; margin-bottom: 10px;">My Life & Hobbies</h1>
+            <p style="color: #718096;">The things that keep me busy and inspired.</p>
+            <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 20px 0;">
+        </header>
+
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <img src="chess.jpg" alt="Chess">
+                <div class="hobby-info">
+                    <h3>Chess</h3>
+                    <p>Enhancing critical thinking and foresight by analyzing complex patterns and executing calculated
+                        moves on the board.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="rubik's.jpg" alt="Rubik's Cube">
+                <div class="hobby-info">
+                    <h3>Rubik's Cube</h3>
+                    <p>Developing patience and cognitive speed through algorithmic problem-solving and constant
+                        refinement of finger tricks.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="cycling.jpg" alt="Cycling">
+                <div class="hobby-info">
+                    <h3>Cycling</h3>
+                    <p>Maintaining physical endurance and mental clarity by exploring local trails and embracing the
+                        discipline of long-distance rides.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="anime.jpg" alt="Watching Anime">
+                <div class="hobby-info">
+                    <h3>Watching Anime</h3>
+                    <p>Appreciating diverse narrative structures, creative world-building, and the intricate art of
+                        Japanese visual storytelling.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="ml.jpg" alt="Mobile Legends">
+                <div class="hobby-info">
+                    <h3>Mobile Legends</h3>
+                    <p>Refining real-time decision-making, strategic coordination, and effective communication within
+                        high-pressure team environments.</p>
+                </div>
+            </div>
+
+            <div class="hobby-card">
+                <img src="music.png" alt="Listening to Music">
+                <div class="hobby-info">
+                    <h3>Listening to Music</h3>
+                    <p>Utilizing curated soundscapes to boost productivity and maintain deep focus during intense
+                        development and design sessions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-section" id="music-workflow">
+            <h2 style="margin-bottom: 10px;">What I Listen To</h2>
+            <p style="color: #718096;">Music is a big part of my workflow. Here is a playlist I usually listen to when
+                I'm working on my projects:</p>
+            <div class="video-container">
+                <iframe style="position: absolute; top:0; left:0; width:100%; height:100%;"
+                    src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h2>Contact Me:</h2>
+            <div class="social-icons">
+                <a href="mailto:ronaldwilliam.geron@gmail.com" title="Email Me">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.facebook.com/ronaldwilliam.d.geron" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/ronaldwilliamd.geron" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/ronaldwilliamgeron" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Ronald William D. Geron. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeIcon.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+    </script>
+</body>
+
+</html>
